@@ -30,7 +30,7 @@
 - Declarar los **principios de arquitectura** que gobernarán las decisiones del plan.
 - Modelar la **arquitectura actual** en las tres capas con ArchiMate 3.2.
 - Construir la **vista de cooperación proceso-aplicación** y detectar procesos sin soporte.
-- Construir la **estructura de la información** con fuentes autoritativas y dueños de dato.
+- Construir la **estru  ctura de la información** con fuentes autoritativas y dueños de dato.
 - Modelar la **arquitectura objetivo** derivada de la visión (Sección 2.2) y de las capacidades (Sección 3.1.5).
 - Ejecutar el **análisis de brechas** y derivar los **paquetes de trabajo**.
 - Redactar la **Sección 5** del PETI (Plan Estratégico de Tecnologías de Información).
