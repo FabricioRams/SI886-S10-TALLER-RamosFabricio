@@ -98,11 +98,29 @@ Se modeló la situación arquitectónica actual de CrediTech Perú S.A.C. abarca
   - *HC-03 (Hoja de Conciliación Bancaria y Tesorería):* Cuadre manual de extractos de bancos vs. amortizaciones.
   - *HC-04 (Hoja de Scoring Manual y Reevaluación):* Archivo con macros donde se recalculan evaluaciones crediticias dudosas.
 - **B.3 Capa de Tecnología:** Servidor físico On-Premise Windows Server 2016 en oficina central, instancias AWS EC2 y RDS PostgreSQL en configuración de zona única (*Single-AZ*), estaciones de trabajo de oficina y terminales móviles BYOD sin administración centralizada de seguridad (*MDM*).
+
+> 📌 **[INSERTAR AQUÍ EN SU DOCUMENTO / DOCS: FIGURA N.° 1]**  
+> **Archivo en repositorio:** `graficos/AR_arquitectura_actual_asis.png`  
+> **Ruta local para insertar:** `C:\PETI-2026-II\SI886-S10-TALLER-RamosFabricio\graficos\AR_arquitectura_actual_asis.png`  
+> **Epígrafe / Título sugerido:** *Figura 1: Arquitectura Empresarial Actual (As-Is) en Tres Capas de CrediTech Perú S.A.C.*  
+> **Ubicación en plantilla Word / Docs:** En la Subsección de Arquitectura Actual (As-Is) / Capas de Negocio, Aplicación y Tecnología.  
+> **Vista previa del gráfico:**  
+> ![Figura 1: Arquitectura Empresarial Actual (As-Is)](graficos/AR_arquitectura_actual_asis.png)
+
 - **B.4 Vista de Cooperación Proceso-Aplicación:**
   - Total de procesos misionales evaluados: **10**
   - Procesos con soporte formal y bueno: **1 de 10 (10.0 %)**
   - Procesos con soporte parcial: **2 de 10 (20.0 %)**
   - **Procesos con soporte deficiente o sostenidos sobre Hojas de Cálculo (*Shadow IT*):** **7 de 10 (70.0 %)**
+
+> 📌 **[INSERTAR AQUÍ EN SU DOCUMENTO / DOCS: FIGURA N.° 2]**  
+> **Archivo en repositorio:** `graficos/AR_cooperacion_proceso_aplicacion.png`  
+> **Ruta local para insertar:** `C:\PETI-2026-II\SI886-S10-TALLER-RamosFabricio\graficos\AR_cooperacion_proceso_aplicacion.png`  
+> **Epígrafe / Título sugerido:** *Figura 2: Vista de Cooperación Proceso-Aplicación y Detección de Shadow IT en CrediTech Perú S.A.C.*  
+> **Ubicación en plantilla Word / Docs:** En la Subsección de Cooperación Proceso-Aplicación (bajo la tabla comparativa de procesos y sistemas).  
+> **Vista previa del gráfico:**  
+> ![Figura 2: Vista de Cooperación Proceso-Aplicación](graficos/AR_cooperacion_proceso_aplicacion.png)
+
 - **B.5 Estructura de la Información ([`05_arquitectura/AR02_entidades.csv`](https://github.com/FabricioRams/SI886-S10-TALLER-RamosFabricio/blob/taller-10/05_arquitectura/AR02_entidades.csv)):**
   - Entidades registradas y analizadas: **8 entidades fundamentales**.
   - **Entidades sin fuente autoritativa:** **5 de 8 entidades (62.5 %)** (Cliente, Evaluación/Scoring, Pagaré/Contrato, Transacción de Cobranza y Reclamos).
@@ -129,6 +147,14 @@ La arquitectura objetivo fue diseñada sin incorporar modas tecnológicas injust
 - **Capa de Aplicación Objetivo:** Sustitución y retiro definitivo del 100% de hojas de cálculo operativas (*Shadow IT*); despliegue de la plataforma corporativa CRM/BPM de Cobranzas; implementación de la **Capa Corporativa de Integración (API Gateway)** con microservicios y colas mTLS; módulo de Onboarding con Biometría RENIEC y Firma Digital PKI acreditada; y mesa de ayuda ITSM integrada a SBS e INDECOPI.
 - **Capa de Tecnología Objetivo:** Retiro y desmantelamiento del servidor físico On-Premise; migración integral a contenedores AWS EKS con autoescalado multizona; base de datos **Amazon Aurora PostgreSQL Serverless Multi-AZ** con failover automatizado (< 30 s); plataforma centralizada de telemetría y seguridad SIEM/SOC 24/7; y gestión corporativa de terminales móviles (MDM).
 
+> 📌 **[INSERTAR AQUÍ EN SU DOCUMENTO / DOCS: FIGURA N.° 3]**  
+> **Archivo en repositorio:** `graficos/AR_arquitectura_objetivo_tobe.png`  
+> **Ruta local para insertar:** `C:\PETI-2026-II\SI886-S10-TALLER-RamosFabricio\graficos\AR_arquitectura_objetivo_tobe.png`  
+> **Epígrafe / Título sugerido:** *Figura 3: Arquitectura Empresarial Objetivo (To-Be) en Tres Capas de CrediTech Perú S.A.C.*  
+> **Ubicación en plantilla Word / Docs:** En la Subsección de Arquitectura Objetivo (To-Be), tras detallar los cambios por capa y antes del análisis de brechas.  
+> **Vista previa del gráfico:**  
+> ![Figura 3: Arquitectura Empresarial Objetivo (To-Be)](graficos/AR_arquitectura_objetivo_tobe.png)
+
 ---
 
 ### Paso D — Análisis de brechas y paquetes de trabajo
@@ -141,6 +167,15 @@ Se configuró y ejecutó el script analítico [`05_arquitectura/AR03_brechas.py`
    - *Por Tipo TOGAF:* Modificado = 6 (42.9 %) · Nuevo = 6 (42.9 %) · Retirado = 2 (14.3 %).
    - *Por Esfuerzo:* Alto = 6 (42.9 %) · Medio = 5 (35.7 %) · Bajo = 3 (21.4 %).
    - *Por Prioridad Estratégica:* Crítica = 6 (42.9 %) · Alta = 6 (42.9 %) · Media = 2 (14.3 %).
+
+> 📌 **[INSERTAR AQUÍ EN SU DOCUMENTO / DOCS: FIGURA N.° 4]**  
+> **Archivo en repositorio:** `graficos/AR_brechas_por_capa.png`  
+> **Ruta local para insertar:** `C:\PETI-2026-II\SI886-S10-TALLER-RamosFabricio\graficos\AR_brechas_por_capa.png`  
+> **Epígrafe / Título sugerido:** *Figura 4: Distribución Cuantitativa de Brechas de Arquitectura por Capa y Tipo (TOGAF / ArchiMate)*  
+> **Ubicación en plantilla Word / Docs:** En la Subsección de Análisis de Brechas, inmediatamente después de la tabla de brechas y sus estadísticas.  
+> **Vista previa del gráfico:**  
+> ![Figura 4: Distribución Cuantitativa de Brechas por Capa y Tipo](graficos/AR_brechas_por_capa.png)
+
 2. **Derivación de Paquetes de Trabajo (Insumo Sección 7.1):** Las 14 brechas se agruparon en **9 paquetes de trabajo coherentes**:
    - `PT-01`: Gobierno del Dato y Maestro de Clientes (MDM) *(Cierra GAP-03)*.
    - `PT-02`: Privacidad de Datos y Cumplimiento Normativo ANPD *(Cierra GAP-04)*.
@@ -151,10 +186,19 @@ Se configuró y ejecutó el script analítico [`05_arquitectura/AR03_brechas.py`
    - `PT-07`: Capa de Integración API Gateway Corporativa y Microservicios *(Cierra GAP-10)*.
    - `PT-08`: Infraestructura Cloud Resiliente Multi-AZ, Migración On-Premise y DRP *(Cierra GAP-12, GAP-13)*.
    - `PT-09`: Monitoreo Centralizado de Ciberseguridad SIEM/SOC 24/7 *(Cierra GAP-14)*.
+
 3. **Determinación Algorítmica de la Secuencia Obligada de Ejecución:**
    - **Fase 1 (Cimientos y Habilitadores Base):** PT-01 (MDM), PT-07 (API Gateway), PT-08 (Cloud Multi-AZ). Sin dependencias previas.
    - **Fase 2 (Cumplimiento Regulatorio Crítico y Seguridad):** PT-02 (Privacidad ANPD, requiere PT-01), PT-03 (Firma PKI, requiere PT-01 y PT-07), PT-09 (SIEM/SOC, requiere PT-08).
    - **Fase 3 (Transformación de Procesos Core y Retiro de Shadow IT):** PT-06 (Scoring v2, requiere PT-01 y PT-07), PT-04 (CRM Cobranzas y Retiro de Excel, requiere PT-01, PT-07 y PT-06), PT-05 (Reclamos ITSM, requiere PT-07).
+
+> 📌 **[INSERTAR AQUÍ EN SU DOCUMENTO / DOCS: FIGURA N.° 5]**  
+> **Archivo en repositorio:** `graficos/AR_secuencia_paquetes_trabajo.png`  
+> **Ruta local para insertar:** `C:\PETI-2026-II\SI886-S10-TALLER-RamosFabricio\graficos\AR_secuencia_paquetes_trabajo.png`  
+> **Epígrafe / Título sugerido:** *Figura 5: Secuencia Obligada y Roadmap de Paquetes de Trabajo en Tres Fases Consecutivas*  
+> **Ubicación en plantilla Word / Docs:** Al cierre de la Subsección de Paquetes de Trabajo y Dependencias (previo a la Sección 3 de Resultados).  
+> **Vista previa del gráfico:**  
+> ![Figura 5: Secuencia Obligada y Roadmap de Paquetes de Trabajo](graficos/AR_secuencia_paquetes_trabajo.png)
 
 ---
 
@@ -255,12 +299,45 @@ Entidades sin fuente autoritativa    : 5 de 8 entidades (62.5 %) carecen de fuen
 Paquetes de trabajo consolidados     : 9 paquetes estructurados en 3 fases consecutivas
 ```
 
-#### b) Diagramas y Gráficos Generados en Alta Resolución
-- **Vista de Cooperación Proceso-Aplicación:** [`graficos/AR_cooperacion_proceso_aplicacion.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_cooperacion_proceso_aplicacion.png)
-- **Arquitectura Empresarial Actual (As-Is):** [`graficos/AR_arquitectura_actual_asis.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_arquitectura_actual_asis.png)
-- **Arquitectura Empresarial Objetivo (To-Be):** [`graficos/AR_arquitectura_objetivo_tobe.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_arquitectura_objetivo_tobe.png)
-- **Distribución de Brechas por Capa y Tipo:** [`graficos/AR_brechas_por_capa.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_brechas_por_capa.png)
-- **Secuencia y Roadmap de Paquetes de Trabajo:** [`graficos/AR_secuencia_paquetes_trabajo.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_secuencia_paquetes_trabajo.png)
+#### b) Guía Maestra de Inserción y Rotulación de Gráficos para Google Docs / Word
+Para la elaboración del informe en **Google Docs** o en la **Plantilla Word de la UPT** (`SI886-PLANTILLA-TALLER.docx`), inserte cada uno de los gráficos generados en la carpeta `graficos/` en las secciones correspondientes indicadas en la siguiente tabla:
+
+| N.° Figura | Archivo de Imagen en `graficos/` | Título / Epígrafe Formal para el Documento | Ubicación Exacta en Plantilla Word / Docs | Evidencia y Finalidad Metodológica |
+|:---:|---|---|---|---|
+| **Figura 1** | [`graficos/AR_arquitectura_actual_asis.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_arquitectura_actual_asis.png) | *Figura 1: Arquitectura Empresarial Actual (As-Is) en Tres Capas de CrediTech Perú S.A.C.* | **Sección 5.2 / Paso B:** Subsección de Arquitectura Actual (tras describir las capas de negocio, aplicación y tecnología). | Demuestra el modelado de las 3 capas en ArchiMate 3.2 e integra las 4 hojas de cálculo operativas (*Shadow IT*). |
+| **Figura 2** | [`graficos/AR_cooperacion_proceso_aplicacion.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_cooperacion_proceso_aplicacion.png) | *Figura 2: Vista de Cooperación Proceso-Aplicación y Detección de Shadow IT en CrediTech Perú S.A.C.* | **Sección 5.2.5 / Paso B.4:** Inmediatamente debajo de la tabla de procesos misionales y niveles de soporte. | Evidencia que el 70 % de los procesos de la empresa operan con soporte deficiente o sobre libros de Excel. |
+| **Figura 3** | [`graficos/AR_arquitectura_objetivo_tobe.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_arquitectura_objetivo_tobe.png) | *Figura 3: Arquitectura Empresarial Objetivo (To-Be) en Tres Capas de CrediTech Perú S.A.C.* | **Sección 5.3 / Paso C:** Subsección de Arquitectura Objetivo (tras la matriz de trazabilidad y derivación estratégica). | Demuestra la modernización integral: API Gateway, CRM/BPM de Cobranzas, Maestro MDM y Cloud Multi-AZ. |
+| **Figura 4** | [`graficos/AR_brechas_por_capa.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_brechas_por_capa.png) | *Figura 4: Distribución Cuantitativa de Brechas de Arquitectura por Capa y Tipo (TOGAF / ArchiMate)* | **Sección 5.4.1 / Paso D.1:** Tras la matriz tabular de caracterización de las 14 brechas arquitectónicas. | Gráfico estadístico de barras apiladas que visualiza la proporción de brechas Nuevas, Modificadas y Retiradas. |
+| **Figura 5** | [`graficos/AR_secuencia_paquetes_trabajo.png`](file:///c:/PETI-2026-II/SI886-S10-TALLER-RamosFabricio/graficos/AR_secuencia_paquetes_trabajo.png) | *Figura 5: Secuencia Obligada y Roadmap de Paquetes de Trabajo en Tres Fases Consecutivas* | **Sección 5.4.3 / Paso D.3:** En la subsección de dependencias y prelación (como cierre de la Sección 5 y paso previo al portafolio). | Diagrama de bloques y fases de prelación técnica obligada que guía el cronograma de ejecución del PETI. |
+
+---
+
+#### c) Galería de Visualizaciones de Alta Resolución (Listas para Copiar o Insertar)
+
+##### Figura 1: Arquitectura Empresarial Actual (As-Is)
+*Ubicación sugerida en Docs: Sección 2 (Paso B) o Sección 5.2*  
+*Archivo: `graficos/AR_arquitectura_actual_asis.png`*  
+![Figura 1: Arquitectura Empresarial Actual (As-Is)](graficos/AR_arquitectura_actual_asis.png)
+
+##### Figura 2: Vista de Cooperación Proceso-Aplicación
+*Ubicación sugerida en Docs: Sección 2 (Paso B.4) o Sección 5.2.5*  
+*Archivo: `graficos/AR_cooperacion_proceso_aplicacion.png`*  
+![Figura 2: Vista de Cooperación Proceso-Aplicación](graficos/AR_cooperacion_proceso_aplicacion.png)
+
+##### Figura 3: Arquitectura Empresarial Objetivo (To-Be)
+*Ubicación sugerida en Docs: Sección 2 (Paso C) o Sección 5.3*  
+*Archivo: `graficos/AR_arquitectura_objetivo_tobe.png`*  
+![Figura 3: Arquitectura Empresarial Objetivo (To-Be)](graficos/AR_arquitectura_objetivo_tobe.png)
+
+##### Figura 4: Distribución Cuantitativa de Brechas por Capa y Tipo
+*Ubicación sugerida en Docs: Sección 2 (Paso D.1) o Sección 5.4.1*  
+*Archivo: `graficos/AR_brechas_por_capa.png`*  
+![Figura 4: Distribución Cuantitativa de Brechas por Capa y Tipo](graficos/AR_brechas_por_capa.png)
+
+##### Figura 5: Secuencia Obligada y Roadmap de Paquetes de Trabajo
+*Ubicación sugerida en Docs: Sección 2 (Paso D.3) o Sección 5.4.3*  
+*Archivo: `graficos/AR_secuencia_paquetes_trabajo.png`*  
+![Figura 5: Secuencia Obligada y Roadmap de Paquetes de Trabajo](graficos/AR_secuencia_paquetes_trabajo.png)
 
 ```mermaid
 gantt
