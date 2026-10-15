@@ -1,0 +1,197 @@
+=====================================================================================
+  REPORTE DE ANÁLISIS DE BRECHAS DE ARQUITECTURA EMPRESARIAL — PETI v0.10
+  ORGANIZACIÓN: CrediTech Perú S.A.C. | RUC: 20608945123
+  ESTUDIANTE: Ramos Atahuachi, Fabricio Farid Edmilson (2023076798)
+=====================================================================================
+
+--- 1. DISTRIBUCIÓN DE BRECHAS POR CAPA DE ARQUITECTURA (N = 14) ---
+            Cantidad  Porcentaje (%)
+Capa                                
+Aplicación         6            42.9
+Datos              3            21.4
+Tecnología         3            21.4
+Negocio            2            14.3
+
+--- 2. DISTRIBUCIÓN POR TIPO DE BRECHA (TOGAF / ARCHIMATE) ---
+             Cantidad  Porcentaje (%)
+Tipo_Brecha                          
+Modificado          6            42.9
+Nuevo               6            42.9
+Retirado            2            14.3
+
+--- 3. ESTIMACIÓN DE ESFUERZO Y PRIORIDAD ESTRATÉGICA ---
+Esfuerzo estimado:
+  • Medio   :  6 brechas (42.9 %)
+  • Alto    :  6 brechas (42.9 %)
+  • Bajo    :  2 brechas (14.3 %)
+Prioridad de atención:
+  • Alta    :  6 brechas (42.9 %)
+  • Crítica :  6 brechas (42.9 %)
+  • Media   :  2 brechas (14.3 %)
+
+--- 4. MATRIZ DETALLADA DE BRECHAS POR CAPA ---
+[GAP-01] (Negocio) Tipo: Modificado | Esfuerzo: Medio | Prioridad: Alta
+  As-Is : Atención de reclamos por correo Outlook sin trazabilidad
+  To-Be : Proceso formal de atención con mesa de ayuda SLA y ticket único
+  Dep.  : GAP-09 --> Asignado a: PT-05 Mesa de Servicio ITSM y Sistema de Reclamos Integrado
+
+[GAP-02] (Negocio) Tipo: Modificado | Esfuerzo: Alto | Prioridad: Alta
+  As-Is : Ruteo de cobranzas y gestión de mora en libros Excel compartidos
+  To-Be : Proceso automatizado de cobranzas omnicanal segmentado por tramos
+  Dep.  : GAP-08 --> Asignado a: PT-04 Plataforma CRM/BPM de Cobranzas y Retiro de Shadow IT
+
+[GAP-03] (Datos) Tipo: Modificado | Esfuerzo: Alto | Prioridad: Crítica
+  As-Is : Maestro de clientes fragmentado en 4 sistemas sin fuente autoritativa ni dueño
+  To-Be : Maestro de Clientes (MDM) gobernado en Core con Data Owner asignado
+  Dep.  : Ninguna --> Asignado a: PT-01 Gobierno del Dato y Maestro de Clientes MDM
+
+[GAP-04] (Datos) Tipo: Nuevo | Esfuerzo: Bajo | Prioridad: Crítica
+  As-Is : Inexistencia de registro centralizado de consentimientos de datos personales
+  To-Be : Registro de Actividades de Tratamiento (RAT) y repositorio de consentimientos
+  Dep.  : GAP-03 --> Asignado a: PT-02 Privacidad de Datos y Cumplimiento Normativo ANPD
+
+[GAP-05] (Datos) Tipo: Nuevo | Esfuerzo: Medio | Prioridad: Crítica
+  As-Is : Pagarés y contratos crediticios en S3 sin inmutabilidad ni firma certificada
+  To-Be : Bóveda documental de pagarés electrónicos con firma PKI y sellado de tiempo WORM
+  Dep.  : GAP-03;GAP-11 --> Asignado a: PT-03 Firma Digital PKI Acreditada y Bóveda Inmutable de Pagarés
+
+[GAP-06] (Aplicación) Tipo: Retirado | Esfuerzo: Bajo | Prioridad: Alta
+  As-Is : Hojas de cálculo operativas de cobranza (HC-01) y scoring manual (HC-04)
+  To-Be : Retiro y desmantelamiento total de hojas de cálculo operativas (Shadow IT)
+  Dep.  : GAP-08;GAP-07 --> Asignado a: PT-04 Plataforma CRM/BPM de Cobranzas y Retiro de Shadow IT
+
+[GAP-07] (Aplicación) Tipo: Modificado | Esfuerzo: Alto | Prioridad: Alta
+  As-Is : Motor de scoring en scripts batch aislados sin explicabilidad ni API
+  To-Be : Motor de Scoring API v2 en tiempo real con explicabilidad algorítmica y revisión asistida
+  Dep.  : GAP-03;GAP-10 --> Asignado a: PT-06 Modernización de Scoring API v2 y Explicabilidad Algorítmica
+
+[GAP-08] (Aplicación) Tipo: Nuevo | Esfuerzo: Alto | Prioridad: Alta
+  As-Is : Inexistencia de aplicativo corporativo de cobranzas y recuperaciones
+  To-Be : Plataforma CRM/BPM de Cobranzas integrada al Core y telefonía en tiempo real
+  Dep.  : GAP-03;GAP-10 --> Asignado a: PT-04 Plataforma CRM/BPM de Cobranzas y Retiro de Shadow IT
+
+[GAP-09] (Aplicación) Tipo: Nuevo | Esfuerzo: Medio | Prioridad: Media
+  As-Is : Recepción de reclamos por buzón compartido de correo Outlook
+  To-Be : Sistema de Gestión de Reclamos Helpdesk integrado a SBS e INDECOPI
+  Dep.  : GAP-10 --> Asignado a: PT-05 Mesa de Servicio ITSM y Sistema de Reclamos Integrado
+
+[GAP-10] (Aplicación) Tipo: Nuevo | Esfuerzo: Alto | Prioridad: Crítica
+  As-Is : Integración mediante archivos planos batch nocturnos CSV entre Core y ERP
+  To-Be : Capa corporativa de integración API Gateway con microservicios y colas mTLS
+  Dep.  : Ninguna --> Asignado a: PT-07 Capa de Integración API Gateway Corporativa y Microservicios
+
+[GAP-11] (Aplicación) Tipo: Modificado | Esfuerzo: Medio | Prioridad: Crítica
+  As-Is : Onboarding digital con firma simple OTP SMS sin acreditación legal ejecutiva
+  To-Be : Módulo de Onboarding con Biometría Facial RENIEC y Firma Digital Acreditada IOFE
+  Dep.  : GAP-10 --> Asignado a: PT-03 Firma Digital PKI Acreditada y Bóveda Inmutable de Pagarés
+
+[GAP-12] (Tecnología) Tipo: Retirado | Esfuerzo: Medio | Prioridad: Media
+  As-Is : Servidor On-Premise local Windows Server para Contabilidad y BD interna
+  To-Be : Retiro y apagado de servidor físico con migración completa a Cloud ERP administrado
+  Dep.  : GAP-10;GAP-13 --> Asignado a: PT-08 Infraestructura Cloud Resiliente Multi-AZ y DRP
+
+[GAP-13] (Tecnología) Tipo: Modificado | Esfuerzo: Alto | Prioridad: Crítica
+  As-Is : Base de datos transaccional en Single-AZ sin contingencia automatizada ni DRP probado
+  To-Be : Base de datos relacional Aurora Multi-AZ con failover automático y DRP validado
+  Dep.  : Ninguna --> Asignado a: PT-08 Infraestructura Cloud Resiliente Multi-AZ y DRP
+
+[GAP-14] (Tecnología) Tipo: Nuevo | Esfuerzo: Medio | Prioridad: Alta
+  As-Is : Logs dispersos en servidores sin monitoreo de seguridad ni correlación centralizada
+  To-Be : Plataforma SIEM centralizada con monitoreo de eventos de seguridad 24/7 y SOC gestionado
+  Dep.  : GAP-13 --> Asignado a: PT-09 Monitoreo Centralizado de Ciberseguridad SIEM/SOC 24/7
+
+=====================================================================================
+--- 5. PAQUETES DE TRABAJO DERIVADOS (INSUMO DEL PORTAFOLIO SECCIÓN 7.1) ---
+=====================================================================================
+• PT-01 Gobierno del Dato y Maestro de Clientes MDM
+   Brechas que cierra : GAP-03
+   Capas impactadas   : Datos
+   Esfuerzo / Prio    : Alto / Crítica
+   Dependencias PKG   : Ninguna (Habilitador Inicial)
+
+• PT-02 Privacidad de Datos y Cumplimiento Normativo ANPD
+   Brechas que cierra : GAP-04
+   Capas impactadas   : Datos
+   Esfuerzo / Prio    : Bajo / Crítica
+   Dependencias PKG   : PT-01
+
+• PT-03 Firma Digital PKI Acreditada y Bóveda Inmutable de Pagarés
+   Brechas que cierra : GAP-05, GAP-11
+   Capas impactadas   : Aplicación, Datos
+   Esfuerzo / Prio    : Medio / Crítica
+   Dependencias PKG   : PT-01, PT-07
+
+• PT-04 Plataforma CRM/BPM de Cobranzas y Retiro de Shadow IT
+   Brechas que cierra : GAP-02, GAP-06, GAP-08
+   Capas impactadas   : Aplicación, Negocio
+   Esfuerzo / Prio    : Alto / Alta
+   Dependencias PKG   : PT-01, PT-06, PT-07
+
+• PT-05 Mesa de Servicio ITSM y Sistema de Reclamos Integrado
+   Brechas que cierra : GAP-01, GAP-09
+   Capas impactadas   : Aplicación, Negocio
+   Esfuerzo / Prio    : Medio / Alta
+   Dependencias PKG   : PT-07
+
+• PT-06 Modernización de Scoring API v2 y Explicabilidad Algorítmica
+   Brechas que cierra : GAP-07
+   Capas impactadas   : Aplicación
+   Esfuerzo / Prio    : Alto / Alta
+   Dependencias PKG   : PT-01, PT-07
+
+• PT-07 Capa de Integración API Gateway Corporativa y Microservicios
+   Brechas que cierra : GAP-10
+   Capas impactadas   : Aplicación
+   Esfuerzo / Prio    : Alto / Crítica
+   Dependencias PKG   : Ninguna (Habilitador Inicial)
+
+• PT-08 Infraestructura Cloud Resiliente Multi-AZ y DRP
+   Brechas que cierra : GAP-12, GAP-13
+   Capas impactadas   : Tecnología
+   Esfuerzo / Prio    : Alto / Crítica
+   Dependencias PKG   : PT-07
+
+• PT-09 Monitoreo Centralizado de Ciberseguridad SIEM/SOC 24/7
+   Brechas que cierra : GAP-14
+   Capas impactadas   : Tecnología
+   Esfuerzo / Prio    : Medio / Alta
+   Dependencias PKG   : PT-08
+
+=====================================================================================
+--- 6. SECUENCIA OBLIGADA DE EJECUCIÓN (ANÁLISIS DE DEPENDENCIAS Y PRELACIÓN) ---
+=====================================================================================
+
+FASE 1 · CIMIENTOS Y HABILITADORES DE DATOS E INFRAESTRUCTURA:
+  [+] PT-01: Gobierno del Dato y Maestro de Clientes MDM
+      Justificación técnica: Cierra GAP-03 (Sin dependencias previas. Habilita consistencia de datos)
+  [+] PT-07: Capa de Integración API Gateway y Microservicios
+      Justificación técnica: Cierra GAP-10 (Sin dependencias previas. Habilita desacoplamiento y APIs mTLS)
+  [+] PT-08: Infraestructura Cloud Multi-AZ y DRP
+      Justificación técnica: Cierra GAP-12, GAP-13 (Sin dependencias previas. Habilita resiliencia y base para ERP Cloud)
+
+FASE 2 · CUMPLIMIENTO REGULATORIO CRÍTICO Y SEGURIDAD REFORZADA:
+  [+] PT-02: Privacidad de Datos y Cumplimiento Normativo ANPD
+      Justificación técnica: Cierra GAP-04 (Requiere PT-01: No se puede registrar tratamiento sin maestro de clientes)
+  [+] PT-03: Firma Digital PKI Acreditada y Bóveda de Pagarés
+      Justificación técnica: Cierra GAP-05, GAP-11 (Requiere PT-01 y PT-07: Consume maestro y viaja por API Gateway)
+  [+] PT-09: Monitoreo Centralizado SIEM/SOC 24/7
+      Justificación técnica: Cierra GAP-14 (Requiere PT-08: Monitorea la infraestructura Aurora Multi-AZ y servicios nube)
+
+FASE 3 · TRANSFORMACIÓN DE PROCESOS CORE Y ERRADICACIÓN DE SHADOW IT:
+  [+] PT-06: Modernización de Scoring API v2 y Explicabilidad
+      Justificación técnica: Cierra GAP-07 (Requiere PT-01 y PT-07: Consume datos limpios y expone servicio síncrono)
+  [+] PT-04: Plataforma CRM/BPM Cobranzas y Retiro Shadow IT
+      Justificación técnica: Cierra GAP-02, GAP-06, GAP-08 (Requiere PT-01, PT-07 y scoring; desmantela Excel HC-01 y HC-04)
+  [+] PT-05: Mesa de Servicio ITSM y Reclamos Integrado SBS
+      Justificación técnica: Cierra GAP-01, GAP-09 (Requiere PT-07: Conexión con portales y sistemas de atención)
+
+=====================================================================================
+  JUSTIFICACIÓN ARQUITECTÓNICA DE LA SECUENCIA DE TRANSICIÓN:
+  1. No es viable ejecutar analítica ni scoring v2 antes de estabilizar el Maestro de Clientes (PT-01),
+     de lo contrario los modelos de Machine Learning entrenarán con datos contradictorios o duplicados.
+  2. No se puede desmantelar el Shadow IT (hojas de cálculo de cobranzas HC-01 y scoring HC-04)
+     antes de desplegar la plataforma CRM/BPM (PT-04) y el nuevo motor API (PT-06), pues el negocio quedaría
+     sin capacidad operativa para gestionar su cartera morosa.
+  3. El API Gateway (PT-07) es prerrequisito de integración para la firma digital (PT-03), el CRM de cobranzas
+     (PT-04) y el sistema de reclamos (PT-05), garantizando seguridad perimetral y trazabilidad de transacciones.
+=====================================================================================

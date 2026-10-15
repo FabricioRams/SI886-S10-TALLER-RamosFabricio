@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="CrediTech Peru - Modelo de Arquitectura Empresarial (PETI 2026-2028)" id="id-creditech-arch-model" version="5.0.0">
+  <folder name="Strategy" id="f-strat" type="strategy" />
+  <folder name="Business" id="f-bus" type="business">
+    <element xsi:type="archimate:BusinessActor" id="elem-ba-cli" name="Cliente / Solicitante de Microcredito" />
+    <element xsi:type="archimate:BusinessActor" id="elem-ba-ase" name="Asesor Comercial Digital" />
+    <element xsi:type="archimate:BusinessActor" id="elem-ba-ana" name="Analista de Creditos y Riesgos" />
+    <element xsi:type="archimate:BusinessActor" id="elem-ba-ges" name="Gestor de Cobranzas" />
+    <element xsi:type="archimate:BusinessActor" id="elem-ba-fin" name="Analista de Tesoreria" />
+    <element xsi:type="archimate:BusinessActor" id="elem-ba-cis" name="Oficial de Cumplimiento / CISO" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-01" name="Toma de Solicitud y Onboarding Digital" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-02" name="Evaluacion y Scoring de Riesgo Crediticio" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-03" name="Formalizacion Contractual y Pagare" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-04" name="Desembolso y Liquidacion de Fondos" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-05" name="Facturacion y Emision de Comprobantes" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-06" name="Ruteo y Cobranza Preventiva" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-07" name="Gestion de Mora Prejudicial" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-08" name="Atencion de Reclamos y Apelaciones" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-09" name="Conciliacion Bancaria y Tesoreria" />
+    <element xsi:type="archimate:BusinessProcess" id="elem-bp-10" name="Analisis Financiero y Riesgo de Cartera" />
+    <element xsi:type="archimate:BusinessObject" id="elem-bo-01" name="Solicitud de Credito" />
+    <element xsi:type="archimate:BusinessObject" id="elem-bo-02" name="Maestro de Clientes" />
+    <element xsi:type="archimate:BusinessObject" id="elem-bo-03" name="Pagare y Contrato" />
+    <element xsi:type="archimate:BusinessObject" id="elem-bo-04" name="Saldo y Amortizacion" />
+    <element xsi:type="archimate:BusinessObject" id="elem-bo-05" name="Comprobante Electronico SUNAT" />
+    <element xsi:type="archimate:BusinessObject" id="elem-bo-06" name="Cartera y Tramo de Mora" />
+  </folder>
+  <folder name="Application" id="f-app" type="application">
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-portal-asis" name="Portal Web y App Movil v1 (As-Is)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-core-asis" name="Core de Creditos Legado Monolitico (As-Is)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-erp-asis" name="ERP Contable Concar Local (As-Is)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-hc01" name="HC-01: Hoja de Calculo Ruteo de Cobranzas (Shadow IT)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-hc04" name="HC-04: Hoja de Calculo Scoring Manual (Shadow IT)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-hc03" name="HC-03: Hoja de Calculo Conciliacion Bancaria (Shadow IT)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-hc02" name="HC-02: Hoja de Calculo Comercial y Prospectos (Shadow IT)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-scoring-batch" name="Motor Analitico de Scoring Scripts Batch (As-Is)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-planillas" name="Software de Planillas y RR.HH." />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-portal-tobe" name="Portal Web y App Movil v2 Omnicanal (To-Be)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-gw-tobe" name="Capa de Integracion API Gateway Corporativo (To-Be)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-mdm-tobe" name="Servicio de Maestro de Clientes MDM (To-Be)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-crm-tobe" name="Plataforma CRM/BPM de Cobranzas (To-Be)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-scoreapi-tobe" name="Motor Scoring API v2 con Explicabilidad (To-Be)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-itsm-tobe" name="Mesa de Servicio ITSM y Reclamos Integrado (To-Be)" />
+    <element xsi:type="archimate:ApplicationComponent" id="elem-app-firmapki-tobe" name="Modulo de Firma Digital PKI Acreditada IOFE (To-Be)" />
+  </folder>
+  <folder name="Technology &amp; Physical" id="f-tec" type="technology">
+    <element xsi:type="archimate:Node" id="elem-tec-onprem" name="Servidor Local On-Premise Windows Server" />
+    <element xsi:type="archimate:Node" id="elem-tec-ec2" name="Instancia AWS EC2 us-east-1 (Single-AZ)" />
+    <element xsi:type="archimate:Node" id="elem-tec-rds" name="Amazon RDS PostgreSQL (Single-AZ)" />
+    <element xsi:type="archimate:Node" id="elem-tec-workstations" name="Estaciones de Trabajo de Oficina (64 PCs)" />
+    <element xsi:type="archimate:Node" id="elem-tec-byod" name="Dispositivos Moviles Personales BYOD" />
+    <element xsi:type="archimate:Node" id="elem-tec-eks" name="Cluster AWS EKS Contenedores (Multi-AZ)" />
+    <element xsi:type="archimate:Node" id="elem-tec-aurora" name="Amazon Aurora PostgreSQL Serverless Multi-AZ" />
+    <element xsi:type="archimate:Node" id="elem-tec-worm" name="Boveda Inmutable AWS S3 Object Lock (WORM)" />
+    <element xsi:type="archimate:Node" id="elem-tec-siem" name="Plataforma SIEM Centralizada / SOC 24/7" />
+    <element xsi:type="archimate:Node" id="elem-tec-mdm" name="Agentes de Seguridad Movil MDM Corporativo" />
+  </folder>
+  <folder name="Motivation" id="f-mot" type="motivation">
+    <element xsi:type="archimate:Principle" id="elem-pr-01" name="PR-01: Dato unico con fuente autoritativa y dueno designado" />
+    <element xsi:type="archimate:Principle" id="elem-pr-02" name="PR-02: Integracion desacoplada mediante APIs y servicios seguros" />
+    <element xsi:type="archimate:Principle" id="elem-pr-03" name="PR-03: Automatizacion end-to-end y erradicacion del Shadow IT" />
+    <element xsi:type="archimate:Principle" id="elem-pr-04" name="PR-04: Privacidad, seguridad y cumplimiento normativo por diseno" />
+    <element xsi:type="archimate:Principle" id="elem-pr-05" name="PR-05: Resiliencia, alta disponibilidad e inmutabilidad Cloud" />
+    <element xsi:type="archimate:Principle" id="elem-pr-06" name="PR-06: Autoservicio omnicanal con explicabilidad algoritmica" />
+  </folder>
+  <folder name="Implementation &amp; Migration" id="f-imp" type="implementation_migration">
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-01" name="PT-01: Gobierno del Dato y Maestro MDM" />
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-02" name="PT-02: Privacidad y Cumplimiento ANPD" />
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-03" name="PT-03: Firma Digital PKI y Boveda de Pagares" />
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-04" name="PT-04: Plataforma CRM/BPM Cobranzas y Retiro Shadow IT" />
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-05" name="PT-05: Mesa de Servicio ITSM y Reclamos SBS" />
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-06" name="PT-06: Modernizacion de Scoring API v2" />
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-07" name="PT-07: Capa de Integracion API Gateway" />
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-08" name="PT-08: Infraestructura Cloud Multi-AZ y DRP" />
+    <element xsi:type="archimate:WorkPackage" id="elem-wp-09" name="PT-09: Monitoreo Centralizado SIEM/SOC 24/7" />
+  </folder>
+  <folder name="Other" id="f-oth" type="other" />
+  <folder name="Relations" id="f-rel" type="relations">
+    <element xsi:type="archimate:ServingRelationship" id="rel-01" source="elem-app-hc01" target="elem-bp-06" name="Soporta informalmente (Shadow IT)" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-02" source="elem-app-hc01" target="elem-bp-07" name="Soporta informalmente (Shadow IT)" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-03" source="elem-app-hc04" target="elem-bp-02" name="Reevaluacion manual en Excel" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-04" source="elem-app-hc03" target="elem-bp-09" name="Conciliacion manual en Excel" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-05" source="elem-app-crm-tobe" target="elem-bp-06" name="Soporte corporativo automatizado" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-06" source="elem-app-crm-tobe" target="elem-bp-07" name="Soporte corporativo automatizado" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-07" source="elem-app-scoreapi-tobe" target="elem-bp-02" name="Inferencia y explicabilidad API" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-08" source="elem-app-itsm-tobe" target="elem-bp-08" name="Tickets de atencion formal con SLA" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-09" source="elem-app-gw-tobe" target="elem-app-crm-tobe" name="Interconexion mTLS" />
+    <element xsi:type="archimate:ServingRelationship" id="rel-10" source="elem-app-gw-tobe" target="elem-app-scoreapi-tobe" name="Publicacion y proxy de servicio" />
+    <element xsi:type="archimate:RealizationRelationship" id="rel-11" source="elem-wp-04" target="elem-app-crm-tobe" name="Implementa" />
+    <element xsi:type="archimate:RealizationRelationship" id="rel-12" source="elem-wp-01" target="elem-app-mdm-tobe" name="Implementa" />
+    <element xsi:type="archimate:RealizationRelationship" id="rel-13" source="elem-wp-07" target="elem-app-gw-tobe" name="Implementa" />
+  </folder>
+  <folder name="Views" id="f-views" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" id="view-cooperacion-proceso-app" name="Vista de Cooperacion Proceso-Aplicacion (As-Is)" />
+    <element xsi:type="archimate:ArchimateDiagramModel" id="view-arquitectura-actual-asis" name="Arquitectura Empresarial Actual (As-Is)" />
+    <element xsi:type="archimate:ArchimateDiagramModel" id="view-arquitectura-objetivo-tobe" name="Arquitectura Empresarial Objetivo (To-Be)" />
+  </folder>
+</archimate:model>
